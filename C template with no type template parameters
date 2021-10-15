@@ -22,12 +22,23 @@ class Point{
 			assert(index<dim&&index>=0);
 			return _coords[index];
 		}
-	private:
+		
+		void print(){
+			cout<<"(";
+			for(int index = 0;index<dim-1;index++)
+			{
+				cout<<_coords[index]<<",";
+			}
+			cout<<_coords[dim-1]<<")"<<endl;
+		}
+	private: 
 		type _coords[dim];
 };
 
+
 int main(){
-	int arr[10] = {0};
-	Point<int,10> Point(arr);
+	int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+	Point<int,10> *P = new Point<int,10>(arr);
+	P->print();
 	return 0;
 }
