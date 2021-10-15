@@ -1,0 +1,7 @@
+//虚拟继承
+class istream : virtual public ios{...};
+class ostream : virtual public ios{...};
+
+class iostream : public istream , public ostream{...};
+
+//base class ( ios ) 只会产生一个实例
